@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Часы</title>
+    <style>
+      .body {
+        padding: 30px;
+      }
+      .text1 {
+        position: absolute;
+        color: #000000;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 70px;
+        width: 90px;
+        top: 70px;
+        left: 560px;
+        right: 0px;
+        bottom: 0px;
+      }
+      .liniya1 {
+        position: absolute;
+        margin: 20px 0;
+        padding: 0px;
+        height: 0px;
+        width: 475px;
+        top: 120px;
+        left: 560px;
+        right: 0px;
+        bottom: 0px;
+        border: none;
+        border-top: 3px solid rgb(189, 184, 184);
+      }
+      .liniya2 {
+        position: absolute;
+        margin: 20px 0;
+        padding: 0px;
+        height: 0px;
+        width: 95px;
+        top: 120px;
+        left: 560px;
+        right: 0px;
+        bottom: 0px;
+        border: none;
+        border-top: 3px solid rgb(9, 16, 116);
+      }
+      .clock {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background: url(Images/Chasu.png);
+        background-size: 100%;
+        border-radius: 100%;
+        border: 20px solid #191780;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+      }
+      .clock .top {
+        position: absolute;
+        font-weight: bold;
+        font-size: 60px;
+        color: #861833;
+        top: 30px;
+        left: 171px;
+      }
+      .clock .right {
+        position: absolute;
+        font-weight: bold;
+        font-size: 60px;
+        color: #861833;
+        top: 170px;
+        left: 335px;
+      }
+      .clock .bottom {
+        position: absolute;
+        font-weight: bold;
+        font-size: 60px;
+        color: #861833;
+        top: 304px;
+        left: 185px;
+      }
+      .clock .left {
+        position: absolute;
+        font-weight: bold;
+        font-size: 60px;
+        color: #861833;
+        top: 170px;
+        left: 35px;
+      }
+      .clock .center {
+        height: 6px;
+        width: 6px;
+        background-color: #262626;
+        border-radius: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+      }
+      .clock .hour {
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        animation: time 86400s infinite steps(60);
+      }
+      .clock .hour:before {
+        content: "";
+        height: 100px;
+        width: 12px;
+        background-color: #262626;
+        position: absolute;
+        top: 100px;
+        border-radius: 100%;
+      }
+      .clock .minute {
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        animation: time 3600s infinite steps(60);
+      }
+      .clock .minute:before {
+        position: absolute;
+        content: "";
+        background-color: #262626;
+        height: 150px;
+        width: 5px;
+        top: 50px;
+        border-radius: 100%;
+      }
+      .clock .second {
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        animation: time 60s infinite steps(60);
+      }
+      .clock .second:before {
+        position: absolute;
+        content: "";
+        background-color: #fd1111;
+        height: 200px;
+        width: 2px;
+        top: 45px;
+      }
+      @keyframes time {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text1">
+      <p>Время</p>
+    </div>
+    <hr class="liniya1" />
+    <hr class="liniya2" />
+    <div class="clock">
+      <div class="top">12</div>
+      <div class="right">3</div>
+      <div class="bottom">6</div>
+      <div class="left">9</div>
+      <div class="center"></div>
+      <div class="hour"></div>
+      <div class="minute"></div>
+      <div class="second"></div>
+    </div>
+  </body>
+</html>
